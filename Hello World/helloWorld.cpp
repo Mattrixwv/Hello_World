@@ -8,6 +8,13 @@
 //iostream contains the declaration of cout
 #include <string>	//contains the std::string type
 
+void functionCall(int num);	//This is a prototype for a function named functionCall
+//All functions must be declared before their first mention in the code
+//Prototypes is a way to do this. The function itself is located after main()
+//void declares what type is going to be returned. This can be any data type
+//num is a parameter and is something that can be passed into the function that will change the behavior of the function
+int function2();
+
 int main()
 {
 	std::cout << "Hello World" << std::endl;	//This is how you write to the console
@@ -35,6 +42,28 @@ int main()
 	std::getline(std::cin, phrase);		//This how you pick up a line with whitespace
 	std::cout << "The phrase you entered is: " << phrase << std::endl;
 
+	functionCall(num);
+	std::cout << "This is the number you typed into the function: " << function2() << std::endl;
+
 	return 0;	//When returning from main the number gets returned to the OS
 	//returning 0 tells the system that everything went alright
+}
+
+void functionCall(int num){
+	std::cout << "This is a function call.\n"
+			<< "The number you entered earlier is " << num << std::endl;
+}
+
+int function2(){
+	int num;	//You can have two variables of the same name as long as they are in different scopes
+	//This num only exists within function2, just as the num in main only exists in main
+	std::cout << "Enter another number: ";
+	std::cin >> num;
+	while(std::cin.fail()){
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
+		std::cout << "That is an invalid number\nEnter another number: ";
+		std::cin >> num;
+	}
+	return num;
 }
