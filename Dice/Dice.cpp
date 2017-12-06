@@ -8,9 +8,9 @@
 #include <random>
 
 
-Dice::Dice(unsigned long sides = 6) : distribution(1, sides)
+Dice::Dice(unsigned long sides) : distribution(1, sides)
 {
-	randomGenerator.seed(std::random_device(){});
+	randomGenerator.seed(std::random_device{}());
 	this->sides = sides;
 	face = distribution(randomGenerator);
 }

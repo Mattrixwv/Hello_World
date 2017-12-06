@@ -19,4 +19,4 @@ public:
 	unsigned long getSides(){	return sides;	}
 	unsigned long getFace(){	return face;	}
 	unsigned long roll();
-}
+};
