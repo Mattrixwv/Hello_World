@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 #include <random>
+//#include <cstdlib>
+//#include <ctime>
 
 
 int main()
@@ -19,7 +21,10 @@ int main()
 	DynamicArray<char> arr4;
 
 	//Sorting
+	//Apparently valgrind does not like random_device so that had to be replaced for the memory leak test
 	std::default_random_engine rnd(std::random_device{}());
+	//srand(time(0));
+
 
 	for(int cnt = 0;cnt < 100;++cnt)
 		arr.push(rnd());
@@ -83,6 +88,6 @@ int main()
 	for(int cnt = 0;cnt < arr4.getSize();++cnt)
 		std::cout << cnt + 1 << ". " << arr4[cnt] << '\n';
 	std::cout << "This is what happens when you try to access something out of bounds: " << arr4[50] << std::endl;
-*/
+
 	return 0;
 }
