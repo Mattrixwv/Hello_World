@@ -115,9 +115,12 @@ T& DynamicArray<T>::at(unsigned long int location){	//Look at the item at arr[lo
 //creates the problem of the compiler having to create functions for each of the types listed in the .o
 //file, creating a much longer compile time.
 //I chose this route to prove that it could be done. I was also having trouble getting my class to work
-//with strings for some reason. Never did figure out why, but I changed the destructor and it now seems
+//with strings for some reason. I never did figure out why, but I changed the destructor and it now seems
 //to work. If you run into any problems with that please leave an error report on my github page so I
 //can try to patch it.
+//However, with something like a dynamic array or a linked list you should really move your implememntation
+//into your header file because it should work the same way for all possible classes.
+//To see an example of this see my LinkedList project
 
 template class DynamicArray<int>;
 template class DynamicArray<unsigned int>;
