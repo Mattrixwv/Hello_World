@@ -1,7 +1,7 @@
 //Tutorials/Dynamic Array/DynamicArray.h
 //Matthew Ellison
 // Created: 12-7-17
-//Modified: 12-7-17
+//Modified: 12-9-17
 //This file contains the implementation of the DynamicArray class
 
 

@@ -1,7 +1,7 @@
 //Tutorials/Dynamic Array/DynamicArray.h
 //Matthew Ellison
 // Created: 12-7-17
-//Modified: 12-7-17
+//Modified: 12-9-17
 //This file contains the declaration of the DynamicArray class
 //This is a practice of how to create a dynamic array as well as a template class
 //This array is simple and doesn't shrink if necessary
