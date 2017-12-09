@@ -18,6 +18,7 @@ int main()
 	DynamicArray<std::string> arr3;
 	DynamicArray<char> arr4;
 
+	//Sorting
 	std::default_random_engine rnd(std::random_device{}());
 
 	for(int cnt = 0;cnt < 100;++cnt)
@@ -28,8 +29,7 @@ int main()
 	std::cout << "After sorting:\n";
 	for(int cnt = 0;cnt < arr.getSize();++cnt)
 		std::cout << cnt + 1 << ". " << arr[cnt] << '\n';
-	std::cout << "Completed!" << std::endl;
-/*
+
 	//Integers
 	for(int cnt = 0;cnt < 10;++cnt)
 		arr1.push(cnt * 5);
