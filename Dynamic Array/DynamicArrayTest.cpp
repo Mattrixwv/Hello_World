@@ -7,17 +7,30 @@
 #include "DynamicArray.h"
 #include <iostream>
 #include <string>
+#include <random>
 
 
 int main()
 {
+	DynamicArray<unsigned long> arr;
 	DynamicArray<int> arr1;
 	DynamicArray<double> arr2;
 	DynamicArray<std::string> arr3;
 	DynamicArray<char> arr4;
 
-	//Integers
+	std::default_random_engine rnd(std::random_device{}());
 
+	for(int cnt = 0;cnt < 100;++cnt)
+		arr.push(rnd());
+	for(int cnt = 0;cnt < arr.getSize();++cnt)
+		std::cout << cnt + 1 << ". " << arr[cnt] << '\n';
+	arr.sort();
+	std::cout << "After sorting:\n";
+	for(int cnt = 0;cnt < arr.getSize();++cnt)
+		std::cout << cnt + 1 << ". " << arr[cnt] << '\n';
+	std::cout << "Completed!" << std::endl;
+/*
+	//Integers
 	for(int cnt = 0;cnt < 10;++cnt)
 		arr1.push(cnt * 5);
 	arr1.push(500, 5L);
@@ -70,6 +83,6 @@ int main()
 	for(int cnt = 0;cnt < arr4.getSize();++cnt)
 		std::cout << cnt + 1 << ". " << arr4[cnt] << '\n';
 	std::cout << "This is what happens when you try to access something out of bounds: " << arr4[50] << std::endl;
-
+*/
 	return 0;
 }

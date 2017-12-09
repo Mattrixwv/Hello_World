@@ -30,6 +30,32 @@ void DynamicArray<T>::expand(){	//Helper function that makes the array larger if
 }
 
 template <class T>
+void DynamicArray<T>::sort(int low, int high){
+	if(low < high){
+		unsigned int index = partition(low, high);
+		sort(low, index - 1);
+		sort(index + 1, high);
+	}
+}
+
+template <class T>
+unsigned int DynamicArray<T>::partition(int low, int high){
+	int bottom = low - 1;
+	T pivot = arr[high];
+
+	for(int cnt = low;cnt <= high - 1;++cnt){
+		if(arr[cnt] <= pivot){
+			//std::cout << "bottom: " << bottom << "\tcnt: " << cnt << std::endl;
+			std::swap(arr[++bottom], arr[cnt]);
+		}
+	}
+	//std::cout << "bottom: " << bottom << "\thigh: " << high << std::endl;
+	std::swap(arr[bottom + 1], arr[high]);
+
+	return bottom + 1;
+}
+
+template <class T>
 DynamicArray<T>::DynamicArray(){
 	arr = nullptr;
 	size = 0;
@@ -82,12 +108,8 @@ T DynamicArray<T>::pop(unsigned long int location){	//Remove the item at arr[loc
 	for(int cnt = (location + 1);cnt < size;++cnt)
 		arr[cnt - 1] = arr[cnt];
 	--size;
+	return temp;
 	//This would be where you would put in shrinking code
-}
-
-template <class T>
-void DynamicArray<T>::sort(){	//Sort the array
-	//Sorting algorithm
 }
 
 template <class T>

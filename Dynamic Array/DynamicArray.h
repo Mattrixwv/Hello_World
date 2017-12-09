@@ -18,6 +18,8 @@ private:
 	unsigned long int size;
 	unsigned long int maxSize;
 	void expand();	//Helper function that makes the array larger if it is full
+	void sort(int low, int high);		//Sorts the array
+	unsigned int partition(int low, int high);	//Helper function for sort
 public:
 	DynamicArray();
 	DynamicArray(T item);
@@ -27,9 +29,9 @@ public:
 	//Add items to the array
 	void push(T item)	{	push(item, (size));	}
 	void push(T item, unsigned long int location);	//Add an item at arr[location]
-	T pop()	{	return pop(size - 1);	};
+	T pop()	{	return pop(size - 1);	}
 	T pop(unsigned long int location);	//Remove the item at arr[location]
-	void sort();	//Sort the array
+	void sort()	{	sort(0, (size - 1));	}	//Sort the array
 	T& at(unsigned long int location);	//Look at the item at arr[location]
 	T& operator[](unsigned long int location)	{	return at(location);	}	//Same as at(), just using array location
 };
