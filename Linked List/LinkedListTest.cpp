@@ -21,6 +21,7 @@ int main()
 	std::cout << "pop(0): " << ll1.pop(0) << std::endl;
 	for(int cnt = 0;cnt < ll1.getSize();++cnt)
 		std::cout << cnt + 1 << ". " << ll1[cnt] << '\n';
+	std::cout << "pop(): " << ll1.pop() << std::endl;
 
 	return 0;
 }

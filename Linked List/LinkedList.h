@@ -63,6 +63,9 @@ public:
 		//If you are trying to insert something at the beginning of the list you need to move the head pointer
 		if(location == 0){
 			head = new Node(item, head);
+			//Check if that was the first element added and adjust the tail pointer if necessary
+			if(tail == nullptr)
+				tail = head;
 		}
 		//If you are trying to insert something at the end of the list you need to move the tail pointer
 		else if(location == size){
