@@ -21,7 +21,8 @@ int main()
 	std::cout << std::endl;
 	for(int cnt = 0;cnt < 10;++cnt)
 		std::cout << "This is cards[" << cnt << "]: " << cards[cnt]->print() << std::endl;
-	std::cout << "This test completed successfully" << std::endl;
+	std::cout << "This test completed successfully\nPress enter to end" << std::endl;
+	std::cin.get();
 
 	return 0;
 }

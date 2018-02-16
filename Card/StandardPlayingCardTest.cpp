@@ -20,7 +20,8 @@ int main()
 	std::cout << "cout << card1: " << card1 << std::endl;
 	for(int cnt = 0;cnt < 10;++cnt)
 		std::cout << "cout << cards[" << cnt << "]: " << *cards[cnt] << std::endl;
-	std::cout << "The test finished successfully!" << std::endl;
+	std::cout << "The test finished successfully!\nPress Enter to continue" << std::endl;
+	std::cin.get();
 
 	return 0;
 }
