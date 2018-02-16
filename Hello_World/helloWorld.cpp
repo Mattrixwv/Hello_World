@@ -44,6 +44,19 @@ int main()
 
 	functionCall(num);
 	std::cout << "This is the number you typed into the function: " << function2() << std::endl;
+	//This is the best way to end a program
+	std::cout << "Press the Enter key to continue";
+	std::cin.ignore(10000, '\n');	//Sometimes this is needed infront of .get() because of carry over from the last cin
+	//This ignores 10000 character or up to the '\n' character in the cin buffer, whichever comes first. (Any number can go in there)
+	std::cin.get();	//This pauses the program until the Enter key is pressed
+
+
+	//Another way of doing this is with a system call
+	//System calls are OS dependant and generally slow so we try to stay away from them
+	//system("Pause");	//This pauses the program until any key is press, but works only in windows
+	//In a system call you can send anything that you would type into the terminal i.e.
+	//system("ls");	Will list all of the file in the directory, just like if you had typed it into the terminal,
+	//but it will only appear in the terminal. There is no way to return it to the running program
 
 	return 0;	//When returning from main the number gets returned to the OS
 	//returning 0 tells the system that everything went alright
