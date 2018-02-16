@@ -1,0 +1,349 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Carddbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/Carddbg.exe",
+				"Card/cardTest.cpp",
+				"Card/Card.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build Card",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/Card.exe",
+				"Card/cardTest.cpp",
+				"Card/Card.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build playingCarddbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/PlayingCarddbg.exe",
+				"Card/StandardPlayingCardTest.cpp",
+				"Card/Card.cpp",
+				"Card/StandardPlayingCardTest.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build playingCard",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/PlayingCard.exe",
+				"Card/StandardPlayingCardTest.cpp",
+				"Card/Card.cpp",
+				"Card/StandardPlayingCard.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build Dicedbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/Dicedbg.exe",
+				"Dice/DiceTest.cpp",
+				"Dice.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build Dice",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/Dice.exe",
+				"Dice/DiceTest.cpp",
+				"Dice/Dice.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build DynamicArraydbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/DynamicArraydbg.exe",
+				"Dynamic_Array/DynamicArrayTest.cpp",
+				"Dynamic_Array/DynamicArray.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build DynamicArray",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/DynamicArray.exe",
+				"Dynamic_Array/DynamicArrayTest.cpp",
+				"Dynamic_Array/DynamicArray.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build FileOperationsdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/FileOperations.exe",
+				"File_Operations/FileOperations.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build FileOperations",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/FileOperations.exe",
+				"File_Operations/FileOperations.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build helloWorlddbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/helloWorlddbg.exe",
+				"Hello_World/helloWorld.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build helloWorld",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/helloWorld.exe",
+				"Hello_World/helloWorld.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build linkedListdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/linkedListbdg.exe",
+				"Linked_List/LinkedListTest.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build linkedList",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/linkedList.exe",
+				"Linked_List/LinkedListTest.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build namespacedbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/namespacedbg.exe",
+				"Namespace/main.cpp",
+				"Namespace/MyNamespace.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build namespace",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/namespace.exe",
+				"Namespace/main.cpp",
+				"Namespace/MyNamespace.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build returnedFunctionsdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/returnedFunctionsdbg.exe",
+				"Returned_Functions/main.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build returnedFunctions",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/returnedFunctions.exe",
+				"Returned_Functions/main.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build templateFunctionsdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/templateFunctions.exe",
+				"Template_Functions/TemplateFunctions.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build templateFunctions",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/templateFunctions.exe",
+				"Template_Functions/TemplateFunctions.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+	]
+}

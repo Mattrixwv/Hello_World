@@ -1,0 +1,218 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Build and Launch Card",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/Carddbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build Carddbg"
+		},
+		{
+			"name": "Build and Launch PlayingCard",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/PlayingCarddbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build playingCarddbg"
+		},
+		{
+			"name": "Build and Launch Dice",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/Dicedbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build Dicedbg"
+		},
+		{
+			"name": "Build and Launch DynamicArray",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/DynamicArraydbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build DynamicArraydbg"
+		},
+		{
+			"name": "Build and Launch FileOps",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/FileOperationsdbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build FileOperationsdbg"
+		},
+		{
+			"name": "Build and Launch Hello World",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/helloWorlddbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build HelloWorlddbg"
+		},
+		{
+			"name": "Build and Launch Linked List",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/linkedListdbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build linkedListdbg"
+		},
+		{
+			"name": "Build and Launch Namespace",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/namespacedbg.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build namespacedbg"
+		},
+		{
+			"name": "Build and Launch Returned Functions",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/returnedFunctions.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build returnedFunctionsdbg"
+		},
+		{
+			"name": "Build and Launch Template Functions",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/Binaries/Windows/templateFunctions.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": true,
+			"MIMode": "gdb",
+			"miDebuggerPath": "C:/MinGW/bin/gbd.exe",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			],
+			"preLaunchTask": "Build templateFunctionsdbg"
+		},
+	]
+}
