@@ -345,5 +345,38 @@
 			// Use the standard MS compiler pattern to detect errors, warnings and infos
 			"problemMatcher": "$msCompile"
 		},
+		{
+			"label": "Build Randomdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/Randomdbg.exe",
+				"Random/Random.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build Random",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/Random.exe",
+				"Random/Random.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
 	]
 }
