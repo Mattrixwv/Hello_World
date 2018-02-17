@@ -15,6 +15,15 @@ void functionCall(int num);	//This is a prototype for a function named functionC
 //num is a parameter and is something that can be passed into the function that will change the behavior of the function
 int function2();
 
+//This is a global constant variable
+//const means constant, it can't be changed
+//double means double precision floating point variable, can also use float but has less precision
+//convesion is to name these variables with all caps
+const double PI = 3.14159265;
+//Every variable has a scope, this is usually anything on the same level or deeper of the curly brackets that it has been declared in
+//Since this was declared outside of the curly brackets it is global and can be used anywhere
+//You don't use global variables very often to help with data encapsulation (safety/security)
+
 int main()
 {
 	std::cout << "Hello World" << std::endl;	//This is how you write to the console
