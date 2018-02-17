@@ -302,7 +302,7 @@
 			"command": "g++",
 			"args": [
 				"-o Binaries/Windows/returnedFunctions.exe",
-				"Returned_Functions/main.cpp"
+				"Returned_Functions/ReturnedFunctions.cpp"
 			],
 			"group": "build",
 			"presentation": {
