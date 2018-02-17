@@ -23,6 +23,9 @@ int main()
 	std::function<void()> funct3 = myReturnedFunction;
 	funct3();
 
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }
 
