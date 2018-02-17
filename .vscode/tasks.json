@@ -179,7 +179,7 @@
 			"problemMatcher": "$msCompile"
 		},
 		{
-			"label": "Build helloWorlddbg",
+			"label": "Build HelloWorlddbg",
 			"type": "shell",
 			"command": "g++",
 			"args": [
@@ -217,7 +217,7 @@
 			"command": "g++",
 			"args": [
 				"-g",
-				"-o Binaries/Windows/linkedListbdg.exe",
+				"-o Binaries/Windows/linkedListdbg.exe",
 				"Linked_List/LinkedListTest.cpp"
 			],
 			"group": "build",
