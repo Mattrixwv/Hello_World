@@ -23,5 +23,8 @@ int main()
 		std::cout << cnt + 1 << ". " << ll1[cnt] << '\n';
 	std::cout << "pop(): " << ll1.pop() << std::endl;
 
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }

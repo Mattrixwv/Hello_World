@@ -96,7 +96,7 @@ public:
 			location = 0;
 		else if(location >= size)
 			location = size - 1;
-			//Throwing exceptions would be better than adjusting the location because of possibly deleting unintended info
+		//Throwing exceptions would be better than adjusting the location because of possibly deleting unintended info
 		T temp;
 		//Check if you are popping the first element and move the head pointer
 		if(location == 0){
@@ -120,6 +120,7 @@ public:
 				nodeTemp = nodeTemp->next;
 			delete tail;
 			tail = nodeTemp;
+			tail->next = nullptr;
 		}
 		//If you are popping something in the middle don't worry about any of the special pointers
 		else{
@@ -137,7 +138,7 @@ public:
 		return temp;
 	}
 	void sort(){	//Sort the array
-		//Implement a bubble sort
+		///Implement a bubble sort
 	}
 	T& at(unsigned long int location){	//Look at the item at location
 		if(location < 0)
