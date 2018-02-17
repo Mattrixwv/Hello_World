@@ -24,5 +24,8 @@ int main()
 	std::cout << "This is the double division for myNamespace: " << myNamespace::divide(dbl1, dbl2) << std::endl;
 	std::cout << "This is the double division for yourNamespace: " << yourNamespace::divide(dbl1, dbl2) << std::endl;
 
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }
