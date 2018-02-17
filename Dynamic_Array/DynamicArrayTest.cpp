@@ -89,5 +89,8 @@ int main()
 		std::cout << cnt + 1 << ". " << arr4[cnt] << '\n';
 	std::cout << "This is what happens when you try to access something out of bounds: " << arr4[50] << std::endl;
 
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }
