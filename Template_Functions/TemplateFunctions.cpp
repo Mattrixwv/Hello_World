@@ -31,6 +31,9 @@ int main()
 	std::cout << "This is the result when " << numDbl2 << " and " << numInt2 << " are sent to the second template: " << functName(numDbl2, numInt2) << std::endl;
 	std::cout << "This is the result when " << numInt1 << " and " << numDbl2 << " are sent to the second template: " << functName(numInt1, numDbl2) << std::endl;
 
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }
 
