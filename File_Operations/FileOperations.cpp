@@ -83,5 +83,9 @@ int main()
 	std::cout << "The integer read from the file is: " << inNum
 			<< "\nThe double read from the file is: " << inNum2 << std::endl;
 
+
+	std::cout << "Press Enter to exit" << std::endl;
+	std::cin.get();
+
 	return 0;
 }
