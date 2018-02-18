@@ -47,7 +47,7 @@
 				"-o Binaries/Windows/PlayingCarddbg.exe",
 				"Card/StandardPlayingCardTest.cpp",
 				"Card/Card.cpp",
-				"Card/StandardPlayingCardTest.cpp"
+				"Card/StandardPlayingCard.cpp"
 			],
 			"group": "build",
 			"presentation": {
