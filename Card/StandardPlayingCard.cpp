@@ -55,11 +55,11 @@ std::ostream& operator<<(std::ostream& os, StandardPlayingCard& card){
 	return os;
 }
 
-/*
+
 std::ostream& operator<<(std::ostream&  os, StandardPlayingCard* card){
 	//os << card->print();
-	os << card->value;
-	switch(card->suit){
+	os << card->getValue();
+	switch(card->getSuit()){
 		case 0 : os << 'S';	break;
 		case 1 : os << 'H';	break;
 		case 2 : os << 'C';	break;
@@ -68,4 +68,4 @@ std::ostream& operator<<(std::ostream&  os, StandardPlayingCard* card){
 	}
 	return os;
 }
-*/
+

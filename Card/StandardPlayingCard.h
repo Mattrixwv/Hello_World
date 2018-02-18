@@ -15,6 +15,8 @@ enum Suit {spades = 0, hearts = 1, clubs = 2, diamonds = 3};
 #include <string>
 #include "Card.h"
 
+//This is an example of inheritance
+//StandardPlayingCard has everything Card has, plus anything you add or change (virtual functions)
 class StandardPlayingCard : public Card
 {
 private:
@@ -25,9 +27,8 @@ public:
 	~StandardPlayingCard();
 	//Declared inline for speed
 	Suit getSuit()	{	return suit;	}
-	std::string print();
+	virtual std::string print();
 	friend std::ostream& operator<<(std::ostream& os, StandardPlayingCard& card);
-	//friend std::ostream& operator<<(std::ostream& os);
 };
 
 #endif //STANDARD_PLAYING_CARD_H

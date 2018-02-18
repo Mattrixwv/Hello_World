@@ -16,7 +16,7 @@ int main()
 	for(int cnt = 0;cnt < 10;++cnt)
 		cards[cnt] = new StandardPlayingCard(cnt + 1, spades);
 	std::cout << "card1.print(): " << card1.print() << std::endl;
-	std::cout << "card2.print(): " << card2.print() << std::endl;
+	std::cout << "card2.operator<<: " << card2 << std::endl;
 	std::cout << "cout << card1: " << card1 << std::endl;
 	for(int cnt = 0;cnt < 10;++cnt)
 		std::cout << "cout << cards[" << cnt << "]: " << *cards[cnt] << std::endl;
