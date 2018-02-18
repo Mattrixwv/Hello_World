@@ -378,5 +378,38 @@
 			// Use the standard MS compiler pattern to detect errors, warnings and infos
 			"problemMatcher": "$msCompile"
 		},
+		{
+			"label": "Build Timerdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/Timerdbg.exe",
+				"Timer/Timer.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build Timer",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/Timer.exe",
+				"Timer/Timer.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
 	]
 }
