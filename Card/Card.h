@@ -25,8 +25,8 @@ public:
 	//Prints value to an ostream
 	virtual std::ostream& print(std::ostream& os);
 	//Easier way to print value to an ostream
-	//virtual friend std::ostream& operator<<(std::ostream& os, Card& card);
-	//virtual friend std::ostream& operator<<(std::ostream& os, Card* card);
+	friend std::ostream& operator<<(std::ostream& os, Card& card);
+	friend std::ostream& operator<<(std::ostream& os, Card* card);
 };
 
 #endif //CARD_H

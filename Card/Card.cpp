@@ -25,14 +25,13 @@ std::ostream& Card::print(std::ostream& os){
 	os << value;
 	return os;
 }
-/*
+
 std::ostream& operator<<(std::ostream& os, Card& card){
 	os << card.value;
 	return os;
 }
 
 std::ostream& operator<<(std::ostream& os, Card* card){
-	os << card->value;
+	os << card->getValue();
 	return os;
 }
-*/

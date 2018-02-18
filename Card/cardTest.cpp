@@ -15,7 +15,7 @@ int main()
 	for(int cnt = 0;cnt < 10;++cnt)
 		cards[cnt] = new Card(cnt + 10);
 	std::cout << "This is card1: " << card1.print() << std::endl;
-	std::cout << "This is card2: " << card2.print() << std::endl;
+	std::cout << "This is card2: " << card2 << std::endl;
 	std::cout << "This is card1 using print(ostream): ";
 	card1.print(std::cout);
 	std::cout << std::endl;
