@@ -411,5 +411,38 @@
 			// Use the standard MS compiler pattern to detect errors, warnings and infos
 			"problemMatcher": "$msCompile"
 		},
+		{
+			"label": "Build STLdbg",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-g",
+				"-o Binaries/Windows/STLdbg.exe",
+				"STL/StandardTemplateLibrary.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "Build STL",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-o Binaries/Windows/STL.exe",
+				"STL/StandardTemplateLibrary.cpp"
+			],
+			"group": "build",
+			"presentation": {
+				// Reveal the output only if unrecognized errors occur.
+				"reveal": "silent"
+			},
+			// Use the standard MS compiler pattern to detect errors, warnings and infos
+			"problemMatcher": "$msCompile"
+		},
 	]
 }
