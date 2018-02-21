@@ -27,7 +27,18 @@ int main()
 	dur = ending - beginning;
 
 	std::cout << "It took " << dur.count() << " time to increment and print " << NUM_REPS << " times" << std::endl;
-	//Add time conversions for nano/micro/milli/second/minute/hour
+	///Could add support for rounding
+	std::chrono::nanoseconds nanoDur = std::chrono::duration_cast<std::chrono::nanoseconds>(dur);
+	std::cout << "It took " << nanoDur.count() << " nanoseconds to increment and print " << NUM_REPS << " times" << std::endl;
+	//Microseconds
+	std::chrono::microseconds microDur = std::chrono::duration_cast<std::chrono::microseconds>(dur);
+	std::cout << "It took " << microDur.count() << " microseconds to increment and print " << NUM_REPS << " times" << std::endl;
+	//Milliseconds
+	std::chrono::milliseconds milliDur = std::chrono::duration_cast<std::chrono::milliseconds>(dur);
+	std::cout << "It took " << milliDur.count() << " milliseconds to increment and print " << NUM_REPS << " times" << std::endl;
+	//Seconds
+	std::chrono::seconds secDur = std::chrono::duration_cast<std::chrono::seconds>(dur);
+	std::cout << "It took " << secDur.count() << " Seconds to increment and print " << NUM_REPS << " times" << std::endl;
 
 	std::cout << "Press Enter to exit" << std::endl;
 	std::cin.get();
