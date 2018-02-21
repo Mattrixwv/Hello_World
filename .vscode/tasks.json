@@ -10,7 +10,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/Carddbg.exe",
+				"-o Binaries/$VSCOSTYPE/Carddbg.exe",
 				"Card/cardTest.cpp",
 				"Card/Card.cpp"
 			],
@@ -28,7 +28,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/Card.exe",
+				"-o Binaries/$VSCOSTYPE/Card.exe",
 				"Card/cardTest.cpp",
 				"Card/Card.cpp"
 			],
@@ -47,7 +47,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/$VSCOSTYPE/PlayingCarddbg.exe",
+				"-o Binaries/$VSCOSTYPE//PlayingCarddbg.exe",
 				"Card/StandardPlayingCardTest.cpp",
 				"Card/Card.cpp",
 				"Card/StandardPlayingCard.cpp"
@@ -66,7 +66,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/PlayingCard.exe",
+				"-o Binaries/$VSCOSTYPE/PlayingCard.exe",
 				"Card/StandardPlayingCardTest.cpp",
 				"Card/Card.cpp",
 				"Card/StandardPlayingCard.cpp"
@@ -86,7 +86,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/Dicedbg.exe",
+				"-o Binaries/$VSCOSTYPE/Dicedbg.exe",
 				"Dice/DiceTest.cpp",
 				"Dice.cpp"
 			],
@@ -104,7 +104,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/Dice.exe",
+				"-o Binaries/$VSCOSTYPE/Dice.exe",
 				"Dice/DiceTest.cpp",
 				"Dice/Dice.cpp"
 			],
@@ -123,7 +123,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/DynamicArraydbg.exe",
+				"-o Binaries/$VSCOSTYPE/DynamicArraydbg.exe",
 				"Dynamic_Array/DynamicArrayTest.cpp",
 				"Dynamic_Array/DynamicArray.cpp"
 			],
@@ -141,7 +141,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/DynamicArray.exe",
+				"-o Binaries/$VSCOSTYPE/DynamicArray.exe",
 				"Dynamic_Array/DynamicArrayTest.cpp",
 				"Dynamic_Array/DynamicArray.cpp"
 			],
@@ -160,7 +160,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/FileOperations.exe",
+				"-o Binaries/$VSCOSTYPE/FileOperations.exe",
 				"File_Operations/FileOperations.cpp"
 			],
 			"group": "build",
@@ -177,7 +177,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/FileOperations.exe",
+				"-o Binaries/$VSCOSTYPE/FileOperations.exe",
 				"File_Operations/FileOperations.cpp"
 			],
 			"group": "build",
@@ -195,7 +195,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/helloWorlddbg.exe",
+				"-o Binaries/$VSCOSTYPE/helloWorlddbg.exe",
 				"Hello_World/helloWorld.cpp"
 			],
 			"group": "build",
@@ -212,7 +212,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/helloWorld.exe",
+				"-o Binaries/$VSCOSTYPE/helloWorld.exe",
 				"Hello_World/helloWorld.cpp"
 			],
 			"group": "build",
@@ -230,7 +230,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/linkedListdbg.exe",
+				"-o Binaries/$VSCOSTYPE/linkedListdbg.exe",
 				"Linked_List/LinkedListTest.cpp"
 			],
 			"group": "build",
@@ -247,7 +247,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/linkedList.exe",
+				"-o Binaries/$VSCOSTYPE/linkedList.exe",
 				"Linked_List/LinkedListTest.cpp"
 			],
 			"group": "build",
@@ -265,7 +265,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/namespacedbg.exe",
+				"-o Binaries/$VSCOSTYPE/namespacedbg.exe",
 				"Namespace/main.cpp",
 				"Namespace/MyNamespace.cpp"
 			],
@@ -283,7 +283,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/namespace.exe",
+				"-o Binaries/$VSCOSTYPE/namespace.exe",
 				"Namespace/main.cpp",
 				"Namespace/MyNamespace.cpp"
 			],
@@ -302,7 +302,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/returnedFunctionsdbg.exe",
+				"-o Binaries/$VSCOSTYPE/returnedFunctionsdbg.exe",
 				"Returned_Functions/main.cpp"
 			],
 			"group": "build",
@@ -319,7 +319,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/returnedFunctions.exe",
+				"-o Binaries/$VSCOSTYPE/returnedFunctions.exe",
 				"Returned_Functions/ReturnedFunctions.cpp"
 			],
 			"group": "build",
@@ -337,7 +337,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/templateFunctions.exe",
+				"-o Binaries/$VSCOSTYPE/templateFunctions.exe",
 				"Template_Functions/TemplateFunctions.cpp"
 			],
 			"group": "build",
@@ -354,7 +354,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/templateFunctions.exe",
+				"-o Binaries/$VSCOSTYPE/templateFunctions.exe",
 				"Template_Functions/TemplateFunctions.cpp"
 			],
 			"group": "build",
@@ -372,7 +372,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/Randomdbg.exe",
+				"-o Binaries/$VSCOSTYPE/Randomdbg.exe",
 				"Random/Random.cpp"
 			],
 			"group": "build",
@@ -389,7 +389,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/Random.exe",
+				"-o Binaries/$VSCOSTYPE/Random.exe",
 				"Random/Random.cpp"
 			],
 			"group": "build",
@@ -407,7 +407,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/Timerdbg.exe",
+				"-o Binaries/$VSCOSTYPE/Timerdbg.exe",
 				"Timer/Timer.cpp"
 			],
 			"group": "build",
@@ -424,7 +424,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/Timer.exe",
+				"-o Binaries/$VSCOSTYPE/Timer.exe",
 				"Timer/Timer.cpp"
 			],
 			"group": "build",
@@ -442,7 +442,7 @@
 			"args": [
 				"-g",
 				"-std=c++11",
-				"-o Binaries/Windows/STLdbg.exe",
+				"-o Binaries/$VSCOSTYPE/STLdbg.exe",
 				"STL/StandardTemplateLibrary.cpp"
 			],
 			"group": "build",
@@ -459,7 +459,7 @@
 			"command": "g++",
 			"args": [
 				"-std=c++11",
-				"-o Binaries/Windows/STL.exe",
+				"-o Binaries/$VSCOSTYPE/STL.exe",
 				"STL/StandardTemplateLibrary.cpp"
 			],
 			"group": "build",
