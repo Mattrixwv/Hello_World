@@ -1,3 +1,10 @@
+//Tutorials/OpenSSL/MD5.cpp
+//Matthew Ellison
+// Created: 2-22-18
+//Modified: 2-22-18
+//This file contains the MD5 hash program that I created using OpenSSL's hash function
+
+
 #include <iostream>
 #include <string>
 #include <cstdint>
@@ -19,6 +26,8 @@ int main(int argc, char** argv) {
 		std::cin.get();
 		return 0;
 	}
+	//Make sure the integer is 8 bits long
+	//unsigned because, why not?
 	uint8_t line;
 	unsigned char digest[MD5_DIGEST_LENGTH];
 
@@ -34,6 +43,7 @@ int main(int argc, char** argv) {
 	}
 	MD5_Final(digest, &ctx);
 
+	//Do not yet understand what this is about, but I know it works so...
 	char mdString[(MD5_DIGEST_LENGTH * 2) + 1];
 	for (int i = 0; i < 16; i++)
 		sprintf(&mdString[i*2], "%02x", (unsigned int)digest[i]);
