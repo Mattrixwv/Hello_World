@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
 
 	//Do not yet understand what this is about, but I know it works so...
 	char mdString[(MD5_DIGEST_LENGTH * 2) + 1];
-	for (int i = 0; i < 16; i++)
+	for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
 		sprintf(&mdString[i*2], "%02x", (unsigned int)digest[i]);
 
 	file.close();
