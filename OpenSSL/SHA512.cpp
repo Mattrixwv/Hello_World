@@ -1,15 +1,15 @@
-//Tutorials/OpenSSL/MD5.cpp
+//Tutorials/OpenSSL/SHA512.cpp
 //Matthew Ellison
 // Created: 2-22-18
 //Modified: 2-22-18
-//This file contains the MD5 hash program that I created using OpenSSL's hash function
+//This file contains the SHA512 hash program that I created using OpenSSL's hash function
 
 
 #include <iostream>
 #include <cstdint>
 #include <fstream>
-#include <openssl/md5.h>
- 
+#include <openssl/sha.h>
+
 int main(int argc, char** argv) {
 	if(argc < 2){
 		std::cout << "There are not enough arguments" << std::endl;
@@ -27,27 +27,27 @@ int main(int argc, char** argv) {
 	//Make sure the integer is 8 bits long
 	//unsigned because, why not?
 	uint8_t line;
-	unsigned char digest[MD5_DIGEST_LENGTH];
+	unsigned char digest[SHA512_DIGEST_LENGTH];
 
-	MD5_CTX ctx;
-	MD5_Init(&ctx);
+	SHA512_CTX ctx;
+	SHA512_Init(&ctx);
 	while(true){
 		//std::getline(file, line);
 		file.read(reinterpret_cast<char*>(&line), sizeof(line));
 		if(file.eof()){
 			break;
 		}
-		MD5_Update(&ctx, reinterpret_cast<char*>(&line), sizeof(line));
+		SHA512_Update(&ctx, reinterpret_cast<char*>(&line), sizeof(line));
 	}
-	MD5_Final(digest, &ctx);
+	SHA512_Final(digest, &ctx);
 
 	//Do not yet understand what this is about, but I know it works so...
-	char mdString[(MD5_DIGEST_LENGTH * 2) + 1];
-	for (int i = 0; i < MD5_DIGEST_LENGTH; i++)
+	char mdString[(SHA512_DIGEST_LENGTH * 2) + 1];
+	for (int i = 0; i < SHA512_DIGEST_LENGTH; i++)
 		sprintf(&mdString[i*2], "%02x", (unsigned int)digest[i]);
 
 	file.close();
-	std::cout << "MD5 digest: " << mdString << std::endl;
+	std::cout << "SHA512 digest: " << mdString << std::endl;
 	std::cin.get();
 
     return 0;
