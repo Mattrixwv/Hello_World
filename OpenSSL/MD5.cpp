@@ -6,10 +6,8 @@
 
 
 #include <iostream>
-#include <string>
 #include <cstdint>
 #include <fstream>
-#include <string.h>
 #include <openssl/md5.h>
  
 int main(int argc, char** argv) {
