@@ -32,8 +32,9 @@ int main(int argc, char** argv) {
 	WHIRLPOOL_CTX ctx;
 	WHIRLPOOL_Init(&ctx);
 	while(true){
-		//std::getline(file, line);
+	//while(!file.eof()){	//Use for windows
 		file.read(reinterpret_cast<char*>(&line), sizeof(line));
+		//Comment out if statement for windows
 		if(file.eof()){
 			break;
 		}
