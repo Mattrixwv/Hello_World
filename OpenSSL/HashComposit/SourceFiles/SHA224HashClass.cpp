@@ -28,7 +28,7 @@ std::string SHA224HashClass::getHash(){
 	isFinished = true;
 	SHA224_Final(digest, &ctx);
 	char mdString[(SHA224_DIGEST_LENGTH * 2) + 1];
-	for(int cnt = 0;cnt < SHA_DIGEST_LENGTH;++cnt){
+	for(int cnt = 0;cnt < SHA224_DIGEST_LENGTH;++cnt){
 		sprintf(&mdString[cnt * 2], "%02x", (unsigned int)digest[cnt]);
 	}
 	return mdString;
