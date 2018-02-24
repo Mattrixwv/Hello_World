@@ -7,7 +7,7 @@
 
 #include "../Headers/HashesHead.h"
 #include "../Headers/WhirlpoolHashClass.h"
-#include "openssl/Whrlpool.h"
+#include "openssl/whrlpool.h"
 #include <string>
 #include <cstdint>
 #include <stdio.h>

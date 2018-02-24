@@ -104,11 +104,15 @@ int main(int argc, char** argv){
 	hashClasses[SHA512_LOCATION] = new SHA512HashClass;
 	hashClasses[WHIRLPOOL_LOCATION] = new WhirlpoolHashClass;
 
-	while(!file.eof()){
+	while(true){
+	//while(!file.eof()){	//Use for windows
 		//Read the next byte from the file
 		uint8_t fileByte = 0;
 		file.read(reinterpret_cast<char*>(&fileByte), sizeof(fileByte));
-
+		//Remove if statement for windows
+		if(file.eof()){
+			break;
+		}
 		//Add it to whichever functions are needed
 		if(functionsNeeded[MD4_LOCATION]){
 			hashClasses[MD4_LOCATION]->addToHash(fileByte);
@@ -151,7 +155,7 @@ int main(int argc, char** argv){
 		std::cout << hashClasses[SHA224_LOCATION]->getHash() << "\tSHA224" << std::endl;
 	}
 	if(functionsNeeded[SHA256_LOCATION]){
-		std::cout << hashClasses[SHA256_LOCATION]->getHash() << "\tSHA224" << std::endl;
+		std::cout << hashClasses[SHA256_LOCATION]->getHash() << "\tSHA256" << std::endl;
 	}
 	if(functionsNeeded[SHA384_LOCATION]){
 		std::cout << hashClasses[SHA384_LOCATION]->getHash() << "\tSHA384" << std::endl;
