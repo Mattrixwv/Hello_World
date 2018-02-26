@@ -104,15 +104,23 @@ int main(int argc, char** argv){
 	hashClasses[SHA512_LOCATION] = new SHA512HashClass;
 	hashClasses[WHIRLPOOL_LOCATION] = new WhirlpoolHashClass;
 
-	while(true){
-	//while(!file.eof()){	//Use for windows
+//These preprocessor directives make it harder to read the code, but makes a single file portable. Pick your poison
+//Here I chose to make it a little harder to read since it is only about how the different systems read files
+//In theory this should work on a mac as well, assuming linux and mac both raise file flags the same way, but I have no way to test that, so no promises
+#ifdef _WIN32
+	while(!file.eof()){	//Use for windows
+#else
+	while(true){	//Use for linux
+#endif
 		//Read the next byte from the file
 		uint8_t fileByte = 0;
 		file.read(reinterpret_cast<char*>(&fileByte), sizeof(fileByte));
 		//Remove if statement for windows
+#ifndef _WIN32
 		if(file.eof()){
 			break;
 		}
+#endif
 		//Add it to whichever functions are needed
 		if(functionsNeeded[MD4_LOCATION]){
 			hashClasses[MD4_LOCATION]->addToHash(fileByte);
