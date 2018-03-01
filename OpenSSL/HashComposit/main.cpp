@@ -30,12 +30,14 @@ int main(int argc, char** argv){
 	for(int cnt = 0;cnt < NUM_HASH_FUNCTIONS;++cnt){
 		functionsNeeded[cnt] = false;
 	}
+	///*Should put in an argument to allow comparison of a string or a string in a file (When only a single hash is asked for)
 	//Run through the arguments and sort them
 	for(int cnt = 1;cnt < argc;++cnt){
 		//If it is not the file name
 		if(argv[cnt][0] != '-'){
 			if(!hasFileName){
 				fileName = argv[cnt];
+				hasFileName = true;
 			}
 			else{
 				std::cout << "There is more than one file name" << std::endl;
