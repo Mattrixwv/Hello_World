@@ -11,11 +11,20 @@
 #include <fstream>
 #include <cstdint>
 
+#ifdef _WIN32
+	#include <ctime>
+#endif //_WIN32
+
 const int64_t MIN = INT64_MIN;
 const int64_t MAX = INT64_MAX;
 
 int main(){
-	std::default_random_engine generator(std::random_device{}());
+	#ifdef _WIN32	//Windows does not implement random_device well yet
+		std::default_random_engine generator(time(0));
+	#else
+		std::default_random_engine generator(std::random_device{}());
+	#endif
+	
 	std::uniform_int_distribution<int64_t> dist(MIN, MAX);
 
 	std::fstream textFile, binFile;
