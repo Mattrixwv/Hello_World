@@ -17,6 +17,7 @@
 #include <openssl/sha.h>
 #include <openssl/whrlpool.h>
 #include <iomanip>
+#include <chrono>
 
 
 enum functionLocation {MD4_LOCATION, MD5_LOCATION, SHA1_LOCATION, SHA224_LOCATION, SHA256_LOCATION, SHA384_LOCATION, SHA512_LOCATION, WHIRLPOOL_LOCATION, NUM_HASH_FUNCTIONS};
@@ -89,7 +90,8 @@ int main(int argc, char** argv){
 		}
 	}
 	//Open the file
-	std::ifstream file(fileName);
+	std::ifstream file;
+	file.open(fileName, std::ios::binary);
 	//Check that the file was opened
 	if(file.fail()){
 		std::cout << "That is an invalid file name!" << std::endl;
@@ -125,20 +127,15 @@ int main(int argc, char** argv){
 //These preprocessor directives make it harder to read the code, but makes a single file portable. Pick your poison
 //Here I chose to make it a little harder to read since it is only about how the different systems read files
 //In theory this should work on a mac as well, assuming linux and mac both raise file flags the same way, but I have no way to test that, so no promises
-#ifdef _WIN32
-	while(!file.eof()){	//Use for windows
-#else
-	while(true){	//Use for linux
-#endif
+	std::chrono::high_resolution_clock::time_point begin, end;
+	begin = std::chrono::high_resolution_clock::now();
+	uint8_t fileByte = 0;
+	while(true){
 		//Read the next byte from the file
-		uint8_t fileByte = 0;
 		file.read(reinterpret_cast<char*>(&fileByte), sizeof(fileByte));
-		//Remove if statement for windows
-#ifndef _WIN32
 		if(file.eof()){
 			break;
 		}
-#endif
 		int threadCounter = 0;
 		//Add it to whichever functions are needed
 		if(functionsNeeded[MD4_LOCATION]){
@@ -169,7 +166,10 @@ int main(int argc, char** argv){
 			threads[cnt].join();
 		}
 	}
+	end = std::chrono::high_resolution_clock::now();
 	file.close();
+	std::cout << "It took " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count() << " nanoseconds to hash this file\n";
+	std::cout << "It took " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << " seconds to hash this file" << std::endl;
 
 	//Calculate the correct hash strings and print all of the hashes
 	if(functionsNeeded[MD4_LOCATION]){
@@ -231,6 +231,7 @@ int main(int argc, char** argv){
 	if(functionsNeeded[WHIRLPOOL_LOCATION]){
 		char temp[(WHIRLPOOL_DIGEST_LENGTH * 2) + 1];
 		unsigned char digest[WHIRLPOOL_DIGEST_LENGTH];
+		WHIRLPOOL_Final(digest, &whirlpool_ctx);
 		for (int i = 0; i < WHIRLPOOL_DIGEST_LENGTH; i++)
 			sprintf(&temp[i*2], "%02x", (unsigned int)digest[i]);
 		std::cout << std::setw(WHIRLPOOL_DIGEST_LENGTH * 2) << std::left << temp << "\tWhirlpool" << std::endl;
