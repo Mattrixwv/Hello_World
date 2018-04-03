@@ -11,6 +11,7 @@
 #include <vector>
 #include <cstdint>
 #include <fstream>
+#include <chrono>
 #include "Headers/MD4HashClass.h"
 #include "Headers/MD5HashClass.h"
 #include "Headers/SHA1HashClass.h"
@@ -19,6 +20,9 @@
 #include "Headers/SHA384HashClass.h"
 #include "Headers/SHA512HashClass.h"
 #include "Headers/WhirlpoolHashClass.h"
+
+//#define TIMED
+//#define MY_DEBUG_CODE
 
 enum functionLocation {MD4_LOCATION, MD5_LOCATION, SHA1_LOCATION, SHA224_LOCATION, SHA256_LOCATION, SHA384_LOCATION, SHA512_LOCATION, WHIRLPOOL_LOCATION, NUM_HASH_FUNCTIONS};
 
@@ -110,6 +114,15 @@ int main(int argc, char** argv){
 //These preprocessor directives make it harder to read the code, but makes a single file portable. Pick your poison
 //Here I chose to make it a little harder to read since it is only about how the different systems read files
 //In theory this should work on a mac as well, assuming linux and mac both raise file flags the same way, but I have no way to test that, so no promises
+	#ifdef TIMED
+	std::chrono::high_resolution_clock::time_point begin, end;
+	begin = std::chrono::high_resolution_clock::now();	
+	#endif
+	
+	#ifdef MY_DEBUG_CODE
+	uint64_t loopCounter = 0;
+	#endif
+
 	while(true){	//Use for windows
 		//Read the next byte from the file
 		uint8_t fileByte = 0;
@@ -143,7 +156,19 @@ int main(int argc, char** argv){
 		if(functionsNeeded[WHIRLPOOL_LOCATION]){
 			hashClasses[WHIRLPOOL_LOCATION]->addToHash(fileByte);
 		}
+		#ifdef MY_DEBUG_CODE
+		if((loopCounter % 1000000) == 0){
+			std::cout << "Loop: " << loopCounter << std::endl;
+			std::cout << "File: " << file.tellg() << std::endl;
+		}
+		++loopCounter;
+		#endif
 	}
+	#ifdef TIMED
+	end = std::chrono::high_resolution_clock::now();
+	std::cout << "It took " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count() << " nanoseconds to hash\n";
+	std::cout << "It took " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << " seconds to hash" << std::endl;
+	#endif
 	file.close();
 
 	//Print all of the hashes
