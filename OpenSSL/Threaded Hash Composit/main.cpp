@@ -130,6 +130,7 @@ int main(int argc, char** argv){
 	std::chrono::high_resolution_clock::time_point begin, end;
 	begin = std::chrono::high_resolution_clock::now();
 	uint8_t fileByte = 0;
+	uint64_t loopCounter = 0;
 	while(true){
 		//Read the next byte from the file
 		file.read(reinterpret_cast<char*>(&fileByte), sizeof(fileByte));
@@ -165,11 +166,16 @@ int main(int argc, char** argv){
 		for(int cnt = 0;cnt < numHashesRunning;++cnt){
 			threads[cnt].join();
 		}
+		if((loopCounter % 100000) == 0){
+			std::cout << "Loop: " << loopCounter << std::endl;
+			std::cout << "File: " << file.tellg() << std::endl;
+		}
+		++loopCounter;
 	}
 	end = std::chrono::high_resolution_clock::now();
 	file.close();
-	std::cout << "It took " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count() << " nanoseconds to hash this file\n";
-	std::cout << "It took " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << " seconds to hash this file" << std::endl;
+	//std::cout << "It took " << std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin).count() << " nanoseconds to hash this file\n";
+	//std::cout << "It took " << std::chrono::duration_cast<std::chrono::seconds>(end - begin).count() << " seconds to hash this file" << std::endl;
 
 	//Calculate the correct hash strings and print all of the hashes
 	if(functionsNeeded[MD4_LOCATION]){
